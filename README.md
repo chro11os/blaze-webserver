@@ -1,6 +1,6 @@
-Blaze Webserver
+# Blaze Webserver
 
-An experimental, high-performance web server built from scratch in Rust, focusing on speed, memory safety, and a low-level understanding of web protocols.
+## An experimental, high-performance web server built from scratch in Rust, focusing on speed, memory safety, and a low-level understanding of web protocols.
 
 <details>
 <summary><strong>Table of Contents</strong></summary>
@@ -14,37 +14,39 @@ An experimental, high-performance web server built from scratch in Rust, focusin
 <li><a href="#-license">License</a></li>
 </ol>
 </details>
-🚧 Project Status
 
-Blaze is currently under active development and is intended for educational and experimental purposes. It is not yet ready for production use.
-💡 Core Philosophy
+# 🚧 Project Status
+## Blaze is currently under active development and is intended for educational and experimental purposes. It is not yet ready for production use.
 
-This project prioritizes a deep, foundational understanding of web server mechanics.
-⚡ Performance First
+# 💡 Core Philosophy
+## This project prioritizes a deep, foundational understanding of web server mechanics.
 
-The primary goal is raw speed. Every architectural decision is made with the aim of achieving a high requests-per-second count, low latency, and a minimal memory footprint.
-🛡️ Security Through Memory Safety
+# ⚡ Performance First
+## The primary goal is raw speed. Every architectural decision is made with the aim of achieving a high requests-per-second count, low latency, and a minimal memory footprint.
 
-By leveraging Rust's ownership model and strict compiler, Blaze aims to eliminate entire classes of common security vulnerabilities, such as buffer overflows, and data races, at compile time.
-⚙️ Minimalism and Control
+# 🛡️ Security Through Memory Safety
+## By leveraging Rust's ownership model and strict compiler, Blaze aims to eliminate entire classes of common security vulnerabilities, such as buffer overflows, and data races, at compile time.
 
-Blaze is being built from first principles to avoid unnecessary abstractions and dependencies. This provides granular control over the entire request-response lifecycle and serves as a clear example of systems programming.
-🛠️ Architecture and Features
-🌐 Asynchronous TCP Core
+# ⚙️ Minimalism and Control
+## Blaze is being built from first principles to avoid unnecessary abstractions and dependencies. This provides granular control over the entire request-response lifecycle and serves as a clear example of systems programming.
 
-The server is built on tokio, a powerful asynchronous runtime for Rust. This allows for a non-blocking, event-driven architecture capable of handling thousands of concurrent connections with high efficiency.
-📜 HTTP/1.1 Implementation
+# 🛠️ Architecture and Features
+## 🌐 Asynchronous TCP Core
+## The server is built on tokio, a powerful asynchronous runtime for Rust. This allows for a non-blocking, event-driven architecture capable of handling thousands of concurrent connections with high efficiency.
 
-A custom parser is being developed to handle raw TCP streams and translate them into structured HTTP/1.1 requests. The focus is on a compliant and performant implementation of the protocol's core features.
-📁 Static Asset Serving
+# 📜 HTTP/1.1 Implementation
+## A custom parser is being developed to handle raw TCP streams and translate them into structured HTTP/1.1 requests. The focus is on a compliant and performant implementation of the protocol's core features.
 
-The server includes a basic file system handler for serving static assets like HTML, CSS, and JavaScript files directly from a designated public directory.
-🚀 Getting Started
-Prerequisites
+# 📁 Static Asset Serving
+## The server includes a basic file system handler for serving static assets like HTML, CSS, and JavaScript files directly from a designated public directory.
+
+# 🚀 Getting Started
+
+# Prerequisites
 
     Rust Toolchain (latest stable version recommended): https://rustup.rs/
 
-Build and Run
+# Build and Run
 
     Clone the repository:
 
@@ -56,7 +58,8 @@ Build and Run
     cargo run
 
 By default, the server will start on 127.0.0.1:8080.
-🗺️ Project Roadmap
+
+# 🗺️ Project Roadmap
 
     [ ] Core Features
 
@@ -86,11 +89,6 @@ By default, the server will start on 127.0.0.1:8080.
 
         [ ] Performance optimizations
 
-🤝 Contributing
+# 📜 License
 
-Contributions are highly welcome. This project is a great place to learn about Rust and web technologies. Please open an issue to discuss a feature or submit a pull request.
-
-As a fellow developer from the Philippines, I'm excited to see what we can build. Let's make something fast!
-📜 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+# This project is licensed under the MIT License. See the LICENSE file for details.
