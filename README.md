@@ -1,94 +1,71 @@
 # Blaze Webserver
 
-## An experimental, high-performance web server built from scratch in Rust, focusing on speed, memory safety, and a low-level understanding of web protocols.
+An experimental, high-performance web server built in Rust, focusing on speed, memory safety, and low-level control.
 
-<details>
-<summary><strong>Table of Contents</strong></summary>
-<ol>
-<li><a href="#-project-status">Project Status</a></li>
-<li><a href="#-core-philosophy">Core Philosophy</a></li>
-<li><a href="#-architecture-and-features">Architecture and Features</a></li>
-<li><a href="#-getting-started">Getting Started</a></li>
-<li><a href="#-project-roadmap">Roadmap</a></li>
-<li><a href="#-contributing">Contributing</a></li>
-<li><a href="#-license">License</a></li>
-</ol>
-</details>
+\<details\>
+\<summary\>\<strong\>Table of Contents\</strong\>\</summary\>
+\<ol\>
+\<li\>\<a href="\#-about"\>About\</a\>\</li\>
+\<li\>\<a href="\#-features"\>Features\</a\>\</li\>
+\<li\>\<a href="\#-getting-started"\>Getting Started\</a\>\</li\>
+\<li\>\<a href="\#-roadmap"\>Roadmap\</a\>\</li\>
+\<li\>\<a href="\#-license"\>License\</a\>\</li\>
+\</ol\>
+\</details\>
 
-## 🚧 Project Status
-### Blaze is currently under active development and is intended for educational and experimental purposes. It is not yet ready for production use.
+## 📖 About
 
-## 💡 Core Philosophy
-### This project prioritizes a deep, foundational understanding of web server mechanics.
+🚧 **Status:** Blaze is experimental and not yet ready for production.
 
-## ⚡ Performance First
-### The primary goal is raw speed. Every architectural decision is made with the aim of achieving a high requests-per-second count, low latency, and a minimal memory footprint.
+This project prioritizes a deep, foundational understanding of web server mechanics through a minimalist, performance-oriented design.
 
-## 🛡️ Security Through Memory Safety
-### By leveraging Rust's ownership model and strict compiler, Blaze aims to eliminate entire classes of common security vulnerabilities, such as buffer overflows, and data races, at compile time.
+  * ⚡ **Performance First:** Built for high throughput, low latency, and a minimal memory footprint.
+  * 🛡️ **Memory Safe:** Uses Rust's ownership model to eliminate common vulnerabilities like buffer overflows at compile time.
+  * ⚙️ **Minimalist:** Built from scratch to avoid unnecessary abstractions and provide granular control over the request-response lifecycle.
 
-## ⚙️ Minimalism and Control
-### Blaze is being built from first principles to avoid unnecessary abstractions and dependencies. This provides granular control over the entire request-response lifecycle and serves as a clear example of systems programming.
+## ✨ Features
 
-## 🛠️ Architecture and Features
-### 🌐 Asynchronous TCP Core
-### The server is built on tokio, a powerful asynchronous runtime for Rust. This allows for a non-blocking, event-driven architecture capable of handling thousands of concurrent connections with high efficiency.
-
-## 📜 HTTP/1.1 Implementation
-## A custom parser is being developed to handle raw TCP streams and translate them into structured HTTP/1.1 requests. The focus is on a compliant and performant implementation of the protocol's core features.
-
-## 📁 Static Asset Serving
-### The server includes a basic file system handler for serving static assets like HTML, CSS, and JavaScript files directly from a designated public directory.
+  * 🌐 **Async Core:** Built on `tokio` for a non-blocking, event-driven architecture that handles thousands of concurrent connections efficiently.
+  * 📜 **HTTP/1.1 Parser:** Custom implementation for handling raw TCP streams and translating them into structured requests.
+  * 📁 **Static File Serving:** Serves static assets (HTML, CSS, JS) from a designated public directory.
 
 ## 🚀 Getting Started
 
-## Prerequisites
+### Prerequisites
 
-    Rust Toolchain (latest stable version recommended): https://rustup.rs/
+  * **Rust Toolchain:** [https://rustup.rs/](https://rustup.rs/)
 
-## Build and Run
+### Build & Run
 
-    Clone the repository:
-
-    git clone [https://github.com/your-username/blaze-webserver.git](https://github.com/your-username/blaze-webserver.git)
+1.  Clone the repository:
+    ```sh
+    git clone https://github.com/chro11os/blaze-webserver.git
     cd blaze-webserver
-
-    Run in development mode:
-
+    ```
+2.  Run the server:
+    ```sh
     cargo run
+    ```
 
-By default, the server will start on 127.0.0.1:8080.
+By default, the server starts on `127.0.0.1:8080`.
 
-## 🗺️ Project Roadmap
+## 🗺️ Roadmap
 
-    [ ] Core Features
-
-        [x] Basic TCP Listener
-
-        [ ] Robust HTTP/1.1 Request Parsing
-
-        [ ] Response Serialization
-
-        [ ] Concurrency using a Thread Pool
-
-    [ ] Advanced Features
-
-        [ ] Basic Routing
-
-        [ ] Middleware Support
-
-        [ ] Configuration from a file (.toml)
-
-        [ ] TLS/HTTPS Support
-
-        [ ] Logging
-
-    [ ] Performance
-
-        [ ] Benchmarking against other servers
-
-        [ ] Performance optimizations
+  - [ ] **Core Features**
+      - [x] Basic TCP Listener
+      - [ ] Robust HTTP/1.1 Request Parsing
+      - [ ] Response Serialization
+      - [ ] Concurrency using a Thread Pool
+  - [ ] **Advanced Features**
+      - [ ] Basic Routing
+      - [ ] Middleware Support
+      - [ ] Configuration from file (`.toml`)
+      - [ ] TLS/HTTPS Support
+      - [ ] Logging
+  - [ ] **Performance**
+      - [ ] Benchmarking
+      - [ ] Optimizations
 
 ## 📜 License
 
-## This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
