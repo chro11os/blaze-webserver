@@ -20,23 +20,23 @@ Blaze is currently under active development and is intended for educational and 
 💡 Core Philosophy
 
 This project prioritizes a deep, foundational understanding of web server mechanics.
-Performance First
+⚡ Performance First
 
 The primary goal is raw speed. Every architectural decision is made with the aim of achieving a high requests-per-second count, low latency, and a minimal memory footprint.
-Security Through Memory Safety
+🛡️ Security Through Memory Safety
 
-By leveraging Rust's ownership model and strict compiler, Blaze aims to eliminate entire classes of common security vulnerabilities, such as buffer overflows and data races, at compile time.
-Minimalism and Control
+By leveraging Rust's ownership model and strict compiler, Blaze aims to eliminate entire classes of common security vulnerabilities, such as buffer overflows, and data races, at compile time.
+⚙️ Minimalism and Control
 
 Blaze is being built from first principles to avoid unnecessary abstractions and dependencies. This provides granular control over the entire request-response lifecycle and serves as a clear example of systems programming.
 🛠️ Architecture and Features
-Asynchronous TCP Core
+🌐 Asynchronous TCP Core
 
 The server is built on tokio, a powerful asynchronous runtime for Rust. This allows for a non-blocking, event-driven architecture capable of handling thousands of concurrent connections with high efficiency.
-HTTP/1.1 Implementation
+📜 HTTP/1.1 Implementation
 
 A custom parser is being developed to handle raw TCP streams and translate them into structured HTTP/1.1 requests. The focus is on a compliant and performant implementation of the protocol's core features.
-Static Asset Serving
+📁 Static Asset Serving
 
 The server includes a basic file system handler for serving static assets like HTML, CSS, and JavaScript files directly from a designated public directory.
 🚀 Getting Started
