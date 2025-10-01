@@ -1,58 +1,50 @@
-🔥 Blaze Webserver
+Blaze Webserver
 
-A blazingly fast, lightweight, and modern web server built from scratch in Rust, with a relentless focus on performance and memory safety.
+An experimental, high-performance web server built from scratch in Rust, focusing on speed, memory safety, and a low-level understanding of web protocols.
 
 <details>
 <summary><strong>Table of Contents</strong></summary>
 <ol>
-<li><a href="#-project-status-work-in-progress-">Project Status</a></li>
-<li><a href="#-why-blaze">Why Blaze?</a></li>
-<li><a href="#-features">Features</a></li>
-<li><a href="#-goals">Goals</a></li>
+<li><a href="#-project-status">Project Status</a></li>
+<li><a href="#-core-philosophy">Core Philosophy</a></li>
+<li><a href="#-architecture-and-features">Architecture and Features</a></li>
 <li><a href="#-getting-started">Getting Started</a></li>
 <li><a href="#-project-roadmap">Roadmap</a></li>
 <li><a href="#-contributing">Contributing</a></li>
 <li><a href="#-license">License</a></li>
 </ol>
 </details>
-🚧 Project Status: Work in Progress 🚧
+🚧 Project Status
 
-Blaze is currently under active development and is not yet ready for production use.
+Blaze is currently under active development and is intended for educational and experimental purposes. It is not yet ready for production use.
+💡 Core Philosophy
 
-This project started as an effort to build a high-performance web server from the ground up, leveraging Rust's unique advantages for systems programming.
-🤔 Why Blaze?
+This project prioritizes a deep, foundational understanding of web server mechanics.
+Performance First
 
-Blaze began as a deep dive into the fundamentals of web technologies through the lens of Rust. It's a journey to understand how high-performance servers work by building one from first principles. This project prioritizes learning, performance, and idiomatic Rust, aiming to create a server that is not only fast but also a clear and well-documented example of systems programming.
-✨ Features
+The primary goal is raw speed. Every architectural decision is made with the aim of achieving a high requests-per-second count, low latency, and a minimal memory footprint.
+Security Through Memory Safety
 
-    Built in pure Rust: For memory safety, concurrency, and performance.
+By leveraging Rust's ownership model and strict compiler, Blaze aims to eliminate entire classes of common security vulnerabilities, such as buffer overflows and data races, at compile time.
+Minimalism and Control
 
-    Asynchronous Architecture: Built on tokio for non-blocking I/O to handle thousands of concurrent connections efficiently.
+Blaze is being built from first principles to avoid unnecessary abstractions and dependencies. This provides granular control over the entire request-response lifecycle and serves as a clear example of systems programming.
+🛠️ Architecture and Features
+Asynchronous TCP Core
 
-    HTTP/1.1 Parsing: Basic request parsing from raw TCP streams.
+The server is built on tokio, a powerful asynchronous runtime for Rust. This allows for a non-blocking, event-driven architecture capable of handling thousands of concurrent connections with high efficiency.
+HTTP/1.1 Implementation
 
-    Static File Serving: Capable of serving static files from a root directory.
+A custom parser is being developed to handle raw TCP streams and translate them into structured HTTP/1.1 requests. The focus is on a compliant and performant implementation of the protocol's core features.
+Static Asset Serving
 
-    Planned - Thread Pool: To efficiently manage CPU-bound tasks.
-
-    Planned - Extensible Middleware: A simple system to add custom logic to the request-response cycle.
-
-🎯 Goals
-
-    Raw Speed: Achieve a high requests-per-second count with low latency.
-
-    Low Memory Footprint: Be as resource-efficient as possible.
-
-    Security: Leverage Rust's type and memory safety to prevent common vulnerabilities.
-
-    Learning: Serve as a comprehensive learning project for anyone interested in Rust and networking.
-
+The server includes a basic file system handler for serving static assets like HTML, CSS, and JavaScript files directly from a designated public directory.
 🚀 Getting Started
 Prerequisites
 
-    Rust toolchain (latest stable version recommended): https://rustup.rs/
+    Rust Toolchain (latest stable version recommended): https://rustup.rs/
 
-Running the Server
+Build and Run
 
     Clone the repository:
 
@@ -63,7 +55,7 @@ Running the Server
 
     cargo run
 
-By default, the server will start on 127.0.0.1:8080 and serve files from a local public directory. You can test it by opening your browser and navigating to http://localhost:8080.
+By default, the server will start on 127.0.0.1:8080.
 🗺️ Project Roadmap
 
     [ ] Core Features
@@ -96,7 +88,7 @@ By default, the server will start on 127.0.0.1:8080 and serve files from a local
 
 🤝 Contributing
 
-Contributions are highly welcome! This project is a great place to learn about Rust and web technologies. Feel free to open an issue to discuss a new feature or submit a pull request.
+Contributions are highly welcome. This project is a great place to learn about Rust and web technologies. Please open an issue to discuss a feature or submit a pull request.
 
 As a fellow developer from the Philippines, I'm excited to see what we can build. Let's make something fast!
 📜 License
