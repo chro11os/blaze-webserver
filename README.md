@@ -1,36 +1,51 @@
 🔥 Blaze Webserver
 
 A blazingly fast, lightweight, and modern web server built from scratch in Rust, with a relentless focus on performance and memory safety.
+
+<details>
+<summary><strong>Table of Contents</strong></summary>
+<ol>
+<li><a href="#-project-status-work-in-progress-">Project Status</a></li>
+<li><a href="#-why-blaze">Why Blaze?</a></li>
+<li><a href="#-features">Features</a></li>
+<li><a href="#-goals">Goals</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-project-roadmap">Roadmap</a></li>
+<li><a href="#-contributing">Contributing</a></li>
+<li><a href="#-license">License</a></li>
+</ol>
+</details>
 🚧 Project Status: Work in Progress 🚧
 
 Blaze is currently under active development and is not yet ready for production use.
 
-This project started as an effort to build a high-performance web server from the ground up, leveraging Rust's unique advantages for systems programming. The primary goal is to learn and explore low-level networking, concurrency, and HTTP protocol implementation while creating something genuinely fast.
+This project started as an effort to build a high-performance web server from the ground up, leveraging Rust's unique advantages for systems programming.
+🤔 Why Blaze?
+
+Blaze began as a deep dive into the fundamentals of web technologies through the lens of Rust. It's a journey to understand how high-performance servers work by building one from first principles. This project prioritizes learning, performance, and idiomatic Rust, aiming to create a server that is not only fast but also a clear and well-documented example of systems programming.
 ✨ Features
 
     Built in pure Rust: For memory safety, concurrency, and performance.
 
-    Asynchronous Architecture: Built on top of tokio for non-blocking I/O to handle thousands of concurrent connections efficiently.
+    Asynchronous Architecture: Built on tokio for non-blocking I/O to handle thousands of concurrent connections efficiently.
 
     HTTP/1.1 Parsing: Basic request parsing from raw TCP streams.
 
     Static File Serving: Capable of serving static files from a root directory.
 
-    (Planned) Thread Pool for Request Handling: To efficiently manage CPU-bound tasks.
+    Planned - Thread Pool: To efficiently manage CPU-bound tasks.
 
-    (Planned) Extensible Middleware: A simple system to add custom logic to the request-response cycle.
+    Planned - Extensible Middleware: A simple system to add custom logic to the request-response cycle.
 
 🎯 Goals
 
-The ultimate goal for Blaze is to be a minimalist yet powerful web server that can compete with established servers in performance benchmarks for static file serving and simple API requests. Key objectives include:
+    Raw Speed: Achieve a high requests-per-second count with low latency.
 
-    Raw Speed: To achieve a high requests-per-second count with low latency.
+    Low Memory Footprint: Be as resource-efficient as possible.
 
-    Low Memory Footprint: To be as resource-efficient as possible.
+    Security: Leverage Rust's type and memory safety to prevent common vulnerabilities.
 
-    Security: To leverage Rust's type and memory safety to prevent common vulnerabilities.
-
-    Learning: To serve as a comprehensive learning project for anyone interested in Rust and networking.
+    Learning: Serve as a comprehensive learning project for anyone interested in Rust and networking.
 
 🚀 Getting Started
 Prerequisites
