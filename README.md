@@ -2,16 +2,16 @@
 
 An experimental, high-performance web server built in Rust, focusing on speed, memory safety, and low-level control.
 
-\<details\>
-\<summary\>\<strong\>Table of Contents\</strong\>\</summary\>
-\<ol\>
-\<li\>\<a href="\#-about"\>About\</a\>\</li\>
-\<li\>\<a href="\#-features"\>Features\</a\>\</li\>
-\<li\>\<a href="\#-getting-started"\>Getting Started\</a\>\</li\>
-\<li\>\<a href="\#-roadmap"\>Roadmap\</a\>\</li\>
-\<li\>\<a href="\#-license"\>License\</a\>\</li\>
-\</ol\>
-\</details\>
+<details>
+<summary><strong>Table of Contents</strong></summary>
+<ol>
+<li><a href="#-about">About</a></li>
+<li><a href="#-features">Features</a></li>
+<li><a href="#-getting-started">Getting Started</a></li>
+<li><a href="#-roadmap">Roadmap</a></li>
+<li><a href="#-license">License</a></li>
+</ol>
+</details>
 
 ## 📖 About
 
