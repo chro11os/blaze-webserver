@@ -1,5 +1,8 @@
 mod error_handling;
 mod progress_bar;
+use rocket::serde::json::Json;
+use serde::{Deserialize, Serialize};
+
 
 #[macro_use]
 extern crate rocket;
@@ -13,3 +16,10 @@ fn index() -> &'static str {
 fn rocket() -> _ {
     rocket::build().mount("/", routes![index])
 }
+
+#[derive(Serialize, Deserialize)]
+struct User {
+    id: u32,
+    name: String,
+}
+
