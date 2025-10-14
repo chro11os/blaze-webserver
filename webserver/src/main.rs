@@ -1,25 +1,13 @@
-mod error_handling;
-mod progress_bar;
-use rocket::serde::json::Json;
-use serde::{Deserialize, Serialize};
+#[macro_use] extern crate rocket;
 
+// 1. Declare the `handler` module. This tells Rust to look for `handler.rs`.
+mod handler;
 
-#[macro_use]
-extern crate rocket;
+// 2. Import the public functions from the `handler` module.
+use handler::{create_user, get_user};
 
-#[get("/")] // this routes the server to the index homepage: "/"
-fn index() -> &'static str {
-    "OK"
-}
-
-#[launch] // launches and builds the server
+#[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![index])
+    // 3. The routes macro works the same because the functions are now in scope.
+    rocket::build().mount("/", routes![create_user, get_user])
 }
-
-#[derive(Serialize, Deserialize)]
-struct User {
-    id: u32,
-    name: String,
-}
-
